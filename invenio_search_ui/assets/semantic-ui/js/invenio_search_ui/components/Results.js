@@ -17,7 +17,7 @@ import {
   ResultsList,
   ResultsGrid,
 } from "react-searchkit";
-import { Grid } from "semantic-ui-react";
+import { Button, Grid, Icon } from "semantic-ui-react";
 import { SearchConfigurationContext } from "./context";
 import { i18next } from "@translations/invenio_search_ui/i18next";
 import { InvenioSearchPagination } from "./InvenioSearchPagination";
@@ -102,6 +102,10 @@ export const ResultOptions = ({ currentResultsState = {} }) => {
                   />
                 </Overridable>
               )}
+              <Button icon size="small" labelPosition="right">
+                <Icon name="download" />
+                Export results
+              </Button>
             </Grid.Column>
             {multipleLayouts ? (
               <Grid.Column width={3} textAlign="right">
